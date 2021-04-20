@@ -19,6 +19,5 @@ public class TerminalTest {
         
         var result = tested.getOuput();
         Assert.assertTrue(result.size() > 0);
-        
     }
 }
