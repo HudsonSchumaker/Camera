@@ -25,7 +25,6 @@ public class Terminal implements Cmd {
                     var buffer = new BufferedReader(new InputStreamReader(in));
                     String line;
                     while ((line = buffer.readLine()) != null) {
-                        System.out.println(line);
                         output.add(line);
                     }
                 }
