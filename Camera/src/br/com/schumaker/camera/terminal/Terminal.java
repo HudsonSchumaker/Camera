@@ -3,7 +3,7 @@ package br.com.schumaker.camera.terminal;
 import br.com.schumaker.camera.core.MyTask;
 import br.com.schumaker.camera.core.MyThreadFactory;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.Executors;
 
 /**
  *
@@ -16,7 +16,7 @@ public class Terminal implements Cmd {
     }
     
     private MyThreadFactory factory = new MyThreadFactory();
-    private ExecutorService   executor = new ThreadPoolFi(getNumberProcessors(), factory);
+    private final ExecutorService executor = Executors.newFixedThreadPool(getNumberProcessors(), factory);
 
     @Override
     public void executeCommand(String[] commands) {
