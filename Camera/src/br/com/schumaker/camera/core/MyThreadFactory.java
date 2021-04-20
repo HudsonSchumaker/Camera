@@ -1,14 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.schumaker.camera.core;
+
+import java.util.concurrent.ThreadFactory;
 
 /**
  *
- * @author hudso
+ * @author hudson
  */
-public class MyThreadFactory {
+public class MyThreadFactory implements ThreadFactory {
     
+    private static int number = 1;
+    
+    @Override
+    public Thread newThread(Runnable task) {
+        Thread thread = new Thread(task, "task " + number);
+        number++;
+        thread.setUncaughtExceptionHandler(new TratadorDeExcecao());
+        return thread;
+    }
 }
