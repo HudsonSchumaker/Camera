@@ -14,7 +14,7 @@ public class MyThreadFactory implements ThreadFactory {
     public Thread newThread(Runnable task) {
         Thread thread = new Thread(task, "task " + number);
         number++;
-        thread.setUncaughtExceptionHandler(new ExceptionHandler());
+        thread.setUncaughtExceptionHandler(new MyExceptionHandler());
         return thread;
     }
 }

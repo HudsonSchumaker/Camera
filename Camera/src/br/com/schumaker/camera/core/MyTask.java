@@ -20,15 +20,15 @@ public class MyTask implements Runnable {
     @Override
     public void run() {
         try {
-            process = Runtime.getRuntime().exec(command);
-            System.err.println(process.isAlive());
-            var in = process.getInputStream();
-            var buffer = new BufferedReader(new InputStreamReader(in));
             String line;
-            while ((line = buffer.readLine()) != null) {
-                System.out.println(line);
-            }
+            process = Runtime.getRuntime().exec(command);// "ffmpeg -i ep3.mp4 video.avi -hide_banner"
+            BufferedReader bre = new BufferedReader(new InputStreamReader(process.getErrorStream()));
 
+            while ((line = bre.readLine()) != null) {
+                System.out.print("..." + "\r");
+            }
+            bre.close();
+            
         } catch (IOException e) {
             System.err.println(e.getMessage());
         } finally {
