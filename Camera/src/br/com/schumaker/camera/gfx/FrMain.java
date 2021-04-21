@@ -11,6 +11,7 @@ public class FrMain extends javax.swing.JFrame {
      */
     public FrMain() {
         this.initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
