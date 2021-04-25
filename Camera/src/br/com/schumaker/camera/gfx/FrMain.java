@@ -42,9 +42,12 @@ public class FrMain extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Tools");
+        jMenu3.setToolTipText("T");
         jMenuBar1.add(jMenu3);
 
+        jMenu4.setMnemonic('S');
         jMenu4.setText("Settings");
+        jMenu4.setToolTipText("");
         jMenuBar1.add(jMenu4);
 
         jMenu5.setText("Help");

@@ -19,11 +19,14 @@
         <Menu class="javax.swing.JMenu" name="jMenu3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Tools"/>
+            <Property name="toolTipText" type="java.lang.String" value="T"/>
           </Properties>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu4">
           <Properties>
+            <Property name="mnemonic" type="int" value="83"/>
             <Property name="text" type="java.lang.String" value="Settings"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu5">
