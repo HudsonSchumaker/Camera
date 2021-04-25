@@ -50,6 +50,7 @@ public class FrMain extends javax.swing.JFrame {
         jMenu4.setToolTipText("");
         jMenuBar1.add(jMenu4);
 
+        jMenu5.setMnemonic('H');
         jMenu5.setText("Help");
         jMenuBar1.add(jMenu5);
 
