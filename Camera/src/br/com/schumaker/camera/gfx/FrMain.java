@@ -33,9 +33,11 @@ public class FrMain extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Camera Edit");
 
+        jMenu1.setMnemonic('F');
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setMnemonic('E');
         jMenu2.setText("Edit");
         jMenuBar1.add(jMenu2);
 
